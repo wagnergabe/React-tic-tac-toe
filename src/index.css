@@ -137,7 +137,9 @@ h1 {
 ol {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 2px;
+  text-align: center;
+  font-size: 1.3rem;
 }
 
 #game-board {
