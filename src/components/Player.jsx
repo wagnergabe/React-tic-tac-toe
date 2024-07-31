@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-function Player(props) {
-const [initialName, setInitialName] = useState(props.name)
+function Player({ name, symbol, isActive }) {
+const [initialName, setInitialName] = useState(name)
 const [isEditing, setIsEditing] = useState(false);
 
 
@@ -20,10 +20,10 @@ if(isEditing) {
 }
 
   return (
-    <li>
+    <li className = {isActive ? 'active' : undefined}>
       <span className="player">
         {playerName}
-        <span className="player-symbol">{props.symbol}</span>
+        <span className="player-symbol">{symbol}</span>
       </span>
       <button onClick={handleEditing}>{isEditing ? 'Save' : 'Edit'}</button>
     </li>
